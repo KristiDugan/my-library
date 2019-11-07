@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Book</title>
+	<link rel="stylesheet" href="bulma.css">
+	<script src="books.js" defer></script>
+</head>
+<body>
+
+	<main>
+	<section class="hero is-primary is-bold">
+			<div class="hero-body">
+				<div class="container">
+					<h1 class="title">
+						My Library
+					</h1>
+					<h2 class="subtitle">
+						The Odin Project
+					</h2>
+				</div>
+			</div>
+		</section>
+		<section class="section">
+			<div class="container">
+				<h2 class="title">Books</h2>
+				<ul id="book-list"></ul>
+				<table id="book-table" class="table">
+					<thead>
+						<tr>
+							<th>Title</th>
+							<th>Author</th>
+							<th>Pages</th>
+							<th>Status</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+
+					</tbody>
+				</table>
+
+
+				<button class="button is-primary" id="new-book">New book</button>
+				<div class="modal" id="new-book-modal">
+					<div class="modal-background"></div>
+					<div class="modal-content">
+						<div class="box">
+
+							<h2 class="title">New Book</h2>
+							<div class="field">
+								<label class="label" for="title">Title</label>
+									<div class="control">
+										<input class="input" type="text" name="title" id="title" placeholder="Book Title">
+									</div>
+							</div>
+							<div class="field">
+								<label class="label" for="author">Author</label>
+								<div class="control">
+									<input class="input" type="text" name="author" id="author" placeholder="Author">
+								</div>
+							</div>
+							<div class="field">
+								<label class="label" for="pages">Pages</label>
+								<div class="control">
+									<input class="input" type="number" name="pages" id="pages" placeholder="0">
+								</div>
+							</div>
+							<div class="field">
+								<label class="label" for="read">Read status</label>
+								<div class="control">
+									<div class="select is-primary">
+										<select id="read">
+											<option value="read">Read</option>
+											<option value="not-read">Not read</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="field is-grouped">
+								<div class="control">
+									<a class="button is-primary" id="add-book">Add book to library</a>
+								</div>
+								<div class="control">
+									<button class="button is-light cancel">Cancel</button>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<button class="modal-close is-large" aria-label="close"></button>
+				</div>
+			</div>
+		</section>
+	</main>
+</body>
+</html>
